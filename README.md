@@ -15,26 +15,26 @@
 *_Step 1_*
 ```sh
 # Clone repo (to any location)
-❯ git clone https://github.com/2lach/Wireguard-logger.git
-❯  cd Wireguard-logger
+git clone https://github.com/2lach/Wireguard-logger.git
+cd Wireguard-logger
 ```
 
 *_Step 2_*
 ```sh
 # save the path as a temporary env var
-❯ WG_LOGGER_PATH=$(realpath wg-logger.sh)
+WG_LOGGER_PATH=$(realpath wg-logger.sh)
 ```
 
 *_Step 3_*
 ```bash
 # add it to your root bashrc
-❯ printf "\n# wg-logger \nsource $WG_LOGGER_PATH &" | sudo tee -a /root/.bashrc
+printf "\n# wg-logger \nsource $WG_LOGGER_PATH &" | sudo tee -a /root/.bashrc
 ```
 
 *_Step 4_*
 ```bash
 # verify succes with
-❯ sudo cat /root/.bashrc
+sudo cat /root/.bashrc
 ```
 
 *_Step 5_*
@@ -53,7 +53,7 @@ of your choice in the # Start logging  # section of `wg-logger.sh`
 # activation
 
 # log in as sudo user
-❯ sudo su
+sudo su
 # this will initalize Wireguard-logger and should generate output similiar to this:
 tcpdump: found
 /var/log/wireguard exist.
@@ -63,7 +63,7 @@ Starting up wireguard-logger
 *_Quickstart_*
 ```bash
 or you can just start it with
-❯ sudo bash ./wg-logger.sh &
+sudo bash ./wg-logger.sh &
 # you will still need to do Step 5 for this to work
 ```
 
